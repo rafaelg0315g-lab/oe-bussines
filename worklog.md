@@ -212,3 +212,20 @@ Work Log:
 
 Stage Summary:
 - GA4 live on the site; data will flow to property G-086KCW3G8W once deployed on the public domain (localhost hits may also appear in DebugView during development)
+
+---
+Task ID: 25 (GA4 verification diagnosis)
+Agent: Z.ai Code (orchestrator)
+Task: Diagnose GA4 "tag not detected on osk-apps.vercel.app" error
+
+Work Log:
+- Fetched osk-apps.vercel.app: it is a DIFFERENT project of the user ("OSK APPS — tools hub"), title and content unrelated to OE BUSINESS; only its own google-site-verification tag, no OE GA tag
+- Probed candidate Vercel URLs: found the real OE BUSINESS deployment live at https://oe-bussines.vercel.app (HTTP 200, optimized title, latest code)
+- Verified the live OE deployment contains: GA4 tag (gtag/js?id=G-086KCW3G8W + config), GSC verification meta (zrn5KAs6u2P8CfpEa7xs8k3FdSUweI5puizcVjxc2t0)
+- Found deployment bug: sitemap.xml and robots.txt serve http://localhost:3000 URLs because NEXT_PUBLIC_SITE_URL is not set in Vercel env vars (fallback baked at build)
+- Root cause of user's error: they ran the GA4 tag check against the wrong domain (osk-apps instead of oe-bussines)
+- No code changes required; fix is operational: (1) re-run GA4 check against https://oe-bussines.vercel.app, (2) set NEXT_PUBLIC_SITE_URL=https://oe-bussines.vercel.app in Vercel env + redeploy, (3) verify GSC property with that URL and submit sitemap after redeploy
+- Worklog updated; instructions delivered to user
+
+Stage Summary:
+- Site is LIVE at https://oe-bussines.vercel.app with full GA4 + GSC stack; pending user-side ops: correct GA4 check URL, Vercel env var + redeploy, GSC verification + sitemap submission
