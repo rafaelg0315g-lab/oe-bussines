@@ -137,3 +137,17 @@ Work Log:
 
 Stage Summary:
 - GitHub README now loads the OE monogram from a brand-new URL, bypassing the stale camo cache entry entirely; the Z logo path no longer exists in the repo
+
+---
+Task ID: 20 (Google Search Console verification)
+Agent: Z.ai Code (orchestrator)
+Task: Add Google Search Console meta-tag verification to the site head
+
+Work Log:
+- Added metadata.verification.google = "zrn5KAs6u2P8CfpEa7xs8k3FdSUweI5puizcVjxc2t0" to src/app/layout.tsx (Next.js Metadata API renders <meta name="google-site-verification" .../> in <head> before <body>, exactly as Google requires)
+- Verified served HTML via curl: tag present inside <head>, before <body> (meta in head: True, meta before body: True)
+- bun run lint clean; committed (bf86cc8) and pushed to origin main (0fbaf16..bf86cc8)
+- Note communicated to user: verification only passes once the site is live on the exact domain/property registered in Search Console (domain still pending purchase); tag must remain in place permanently
+
+Stage Summary:
+- Site head now carries the permanent Google ownership-verification tag; ready to pass "Verificar" once deployed on the registered property
