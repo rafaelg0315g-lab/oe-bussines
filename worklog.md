@@ -163,3 +163,22 @@ Work Log:
 
 Stage Summary:
 - Repository rafaelg0315g-lab/oe-bussines up to date (main = origin/main = c1d6c41)
+
+---
+Task ID: 22 (SEO ranking improvements)
+Agent: Z.ai Code (orchestrator)
+Task: Improve Google ranking potential — implement remaining technical SEO
+
+Work Log:
+- Audited: robots.txt allowed crawlers but had no Sitemap line; no sitemap existed; no structured data; alternates had es/en hreflang both pointing to "/" (same-URL self-reference noise)
+- Added src/app/sitemap.ts (MetadataRoute.Sitemap, home URL, monthly, priority 1)
+- Added src/app/robots.ts (dynamic, allows all, declares sitemap URL from NEXT_PUBLIC_SITE_URL)
+- Removed static public/robots.txt (git rm) to avoid conflict with the app route
+- Added JSON-LD @graph in layout.tsx: Organization (name, alternateName, description, url, logo, founders Oscar+Eduardo, ContactPoint with real WhatsApp +57 324 707 8735 → wa.me/573247078735, es/en) + WebSite (url, name, description, inLanguage es, publisher → Organization). Only verifiable facts, no invented URLs/stats
+- Fixed alternates: removed incorrect languages entry, kept canonical "/"
+- Verified via curl: /robots.txt serves with Sitemap line, /sitemap.xml valid XML, JSON-LD script present in served HTML; bun run lint clean
+- URLs currently render with localhost:3000 fallback — auto-updates when NEXT_PUBLIC_SITE_URL is set at deploy time
+- Committed and pushed to origin main
+
+Stage Summary:
+- Technical SEO complete: sitemap + robots + structured data + clean canonical; remaining ranking work is deployment-dependent (domain, GSC submission, backlinks) — communicated roadmap to user
