@@ -1,0 +1,301 @@
+
+##########################################################################################
+### velmax.llc — https://www.velmax.llc/
+##########################################################################################
+TITLE: Velmax — The signal before the search
+DESCRIPTION: Velmax is building consent-first audience and intent data from AI-powered apps. Early access is open for marketers and founding app partners.
+PUBLISH_TIME: undefined
+
+--- HEADINGS ---
+  H1: T h e s i g n a l b e f o r e t h e s e a r c h .
+  H2: Four ways to buy what the market is about to do.
+  H3: Cohorts defined by what people asked for help with.
+  H3: Demand, forming.
+  H3: What’s rising, weekly.
+  H3: Describe the customer. We’ll find them.
+  H2: What’s going on the shelf.
+  H3: Planning a trip in the next 30 days
+  H3: Comparing EVs as a first-time buyer
+  H3: Moving house within 90 days
+  H3: Training for a first half-marathon
+  H3: Researching a first mortgage
+  H3: Households that plan meals weekly
+  H3: Adults exploring a career switch
+  H3: Bringing home a new puppy
+  H3: Early holiday gift planners
+  H3: Returning PC gamers
+  H3: Founders setting up payroll
+  H3: Building a skincare routine
+  H2: From an app to an audience.
+  H3: Collect
+  H3: Protect
+  H3: Model
+  H3: Deliver
+  H2: Privacy is the product spec.
+  H3: Consent at the source
+  H3: Words stay on the device
+  H3: Minimum cohort sizes
+  H3: No sensitive categories
+  H3: Opt-outs that stick
+  H3: Paper trail included
+  H2: Run an AI app? Earn from insight, not from your users’ words.
+  H2: Tell us who you’re trying to reach.
+  H2: This is the data you just made.
+
+--- LINK LABELS (nav & CTA) ---
+  [Skip to content] -> #main
+  [[SVG] VELMAX] -> #top
+  [Data] -> #products
+  [Catalog] -> #catalog
+  [Method] -> #method
+  [Trust] -> #trust
+  [Partners] -> #partners
+  [Get early access] -> #contact
+  [01 Data products] -> #products
+  [02 Catalog] -> #catalog
+  [03 Method] -> #method
+  [04 Trust] -> #trust
+  [05 Partners] -> #partners
+  [06 Contact] -> #contact
+  [Get early access →] -> #contact
+  [See what we’re building] -> #catalog
+  [Apply as a founding partner →] -> #contact
+  [contact@velmax.llc] -> mailto:contact@velmax.llc
+  [Start a conversation →] -> #contact
+  [Products] -> #products
+  [Contact] -> #contact
+  [Consumer opt-out] -> mailto:contact@velmax.llc?subject=Consumer%20opt-out%20request
+  [Privacy requests] -> mailto:contact@velmax.llc?subject=Privacy%20request
+  [Back to top ↑] -> #top
+  [Register interest →] -> #contact
+
+--- BUTTONS ---
+  • Menu
+  • ←
+  • →
+  • Request early access →
+  • Forget this session
+  • Close ×
+
+--- VISIBLE TEXT (first ~4500 chars) ---
+Velmax — Audience & intent data from AI-powered apps 
+ [SVG] 
+ Skip to content 
+ Velmax 
+ 023 
+ Calibrating signal field 
+ SIG-0000 exploring · 0.10 
+ [SVG] 
+ VELMAX 
+ Data 
+ Catalog 
+ Method 
+ Trust 
+ Partners 
+ PA, USA  1 : 36 AM  ET 
+ Get early access 
+ Menu 
+ 01 Data products 
+ 02 Catalog 
+ 03 Method 
+ 04 Trust 
+ 05 Partners 
+ 06 Contact 
+ contact@velmax.llc
+ Early access · intent data from AI-powered apps
+ T h e s i g n a l 
+ b e f o r e t h e s e a r c h . 
+ People tell AI apps what they’re planning long before they search for it. Velmax is building the consent-first network that turns that activity into audience and intent data your marketing team can put to work.
+ Get early access → 
+ See what we’re building 
+ Fig. 01 — Live signal field 
+ Move your cursor. That’s a signal. 
+ x 0.000  y 0.000 
+ events 000000 
+ sent to Velmax 0 
+ (Scroll) 
+ Travel planning
+ Auto in-market
+ Home & moving
+ Personal finance
+ Fitness & training
+ Career change
+ Retail & gifting
+ Food & meal planning
+ Gaming
+ Small business
+ Pets
+ Education
+ Travel planning
+ Auto in-market
+ Home & moving
+ Personal finance
+ Fitness & training
+ Career change
+ Retail & gifting
+ Food & meal planning
+ Gaming
+ Small business
+ Pets
+ Education
+ 01 Data products
+ Four ways to buy what the 
+ market is about to do. 
+ Four products, one consent-first signal network. Each is designed to ship with a plain-English definition, a refresh cadence and the consent basis behind it.
+ A Audience segments
+ Cohorts defined by what people asked for help with.
+ Audiences defined by real planning moments — from “moving in the spring” to “shopping for a first EV” — built to activate in your DSP, CRM or clean room.
+ Weekly refresh
+ Plain-English definitions
+ DSP · CRM · clean room
+ SEG-0142 · Travel 30d SEG-0317 · First EV SEG-0409 · Moving 90d 
+ B Intent signals
+ Demand, forming.
+ Topic-level interest aggregated by region and hour, designed to show demand building before it reaches search volume.
+ Topic-level
+ Hourly aggregates
+ C Trend panels
+ What’s rising, weekly.
+ Indexes of rising and falling topics across the network, with category and regional cuts your analysts can model against.
+ [SVG] 
+ Weekly indexes
+ CSV · Parquet
+ D Custom cohorts
+ Describe the customer. We’ll find them.
+ Write the audience you want in a sentence. We’ll model a cohort against the network and come back with a sized, documented definition.
+ cohort-builder · concept preview 
+ > describe your customer
+ people comparing home solar quotes in the northeast 
+ matching topics 14 
+ aggregation floor passed 
+ draft cohort ready 
+ 02 Catalog
+ What’s going on the shelf. 
+ The first segments on our roadmap. Each will ship with its definition, sources, refresh cadence and consent basis. Drag the ring, then open any card for its draft spec.
+ Travel SEG-0142 
+ Planning a trip in the next 30 days
+ Refresh Daily 
+ Built from Itinerary & booking prompts 
+ Auto SEG-0317 
+ Comparing EVs as a first-time buyer
+ Refresh Weekly 
+ Built from Range, charging & price questions 
+ Home SEG-0409 
+ Moving house within 90 days
+ Refresh Weekly 
+ Built from Moving checklists & area research 
+ Fitness SEG-0521 
+ Training for a first half-marathon
+ Refresh Weekly 
+ Built from Training-plan requests 
+ Finance SEG-0633 
+ Researching a first mortgage
+ Refresh Weekly 
+ Built from Rate & affordability questions 
+ Food SEG-0718 
+ Households that plan meals weekly
+ Refresh Weekly 
+ Built from Menu & grocery-list prompts 
+ Education SEG-0806 
+ Adults exploring a career switch
+ Refresh Monthly 
+ Built from Course & résumé prompts 
+ Pets SEG-0912 
+ Bringing home a new puppy
+ Refresh Weekly 
+ Built from Training & supply questions 
+ Retail SEG-1024 
+ Early holiday gift planners
+ Refresh Daily, seasonal 
+ Built from Gift-idea prompts 
+ Gaming SEG-1107 
+ Returning PC gamers
+ Refresh Weekly 
+ Built from Build & upgrade questions 
+ Small business SEG-1233 
+ Founders setting up payroll
+ Refresh Monthly 
+ Built from Tooling & setup questions 
+ Beauty SEG-1350 
+ Building a skincare routine
+ Refresh Weekly 
+ Built from Routine & product comparisons 
+ ← 
+ Planned segments · draft specs, subject to change
+ → 
+ 03 Method
+ From an app to an audience. 
+ 01 
+ Collect
+ Partner apps send event-level signals through a lightweight integration — only for users who opted in under the app’s own privacy notice.
+ 02 
+ Protect
+ Direct identifiers are dropped or replaced, and free text is classified on the device. The topic leaves the app; the words never do.
+ 03 
+ Model
+
+--- SECTION IDS ---
+  section id="" class="hero"
+  section id="" class="sec"
+  section id="" class="sec sec-catalog"
+  section id="" class="chapter"
+  section id="" class="sec sec-paper"
+  section id="" class="sec sec-partners"
+  section id="" class="sec sec-contact"
+  section id="" class="receipt wrap"
+
+--- TECH HINTS ---
+{
+  "canvas": 6,
+  "webgl": true,
+  "three": false,
+  "lenis": true,
+  "gsap": false,
+  "framer": false,
+  "next": false,
+  "fonts_google": "Instrument+Serif:ital@0;1",
+  "fonts_self": 0,
+  "videos": 0,
+  "iframes": 0
+}
+
+##########################################################################################
+### edolus.com — https://edolus.com/
+##########################################################################################
+TITLE: EDOLUS
+DESCRIPTION: 
+PUBLISH_TIME: undefined
+
+--- HEADINGS ---
+
+--- LINK LABELS (nav & CTA) ---
+
+--- BUTTONS ---
+
+--- VISIBLE TEXT (first ~4500 chars) ---
+EDOLUS 
+ [SVG] 
+ 1 2 9 5 % 
+ INTELLIGENCE
+AT PLANETARY SCALE
+ Orchestrating the foundation of artificial intelligence
+from the edge of the atmosphere.
+ INITIATE SYSTEM 
+ [SVG] Experience with headphones
+
+--- SECTION IDS ---
+
+--- TECH HINTS ---
+{
+  "canvas": 2,
+  "webgl": false,
+  "three": false,
+  "lenis": false,
+  "gsap": true,
+  "framer": false,
+  "next": false,
+  "fonts_google": "JetBrains+Mono:wght@500",
+  "fonts_self": 0,
+  "videos": 0,
+  "iframes": 0
+}

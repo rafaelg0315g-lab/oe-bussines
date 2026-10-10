@@ -1,0 +1,88 @@
+
+##########################################################################################
+### DEEP DIVE: velmax.llc
+##########################################################################################
+
+--- META TAGS ---
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Velmax is building consent-first audience and intent data from AI-powered apps. Early access is open for marketers and founding app partners.">
+  <meta name="theme-color" content="#05070b">
+  <meta property="og:title" content="Velmax — The signal before the search">
+  <meta property="og:description" content="Consent-first audience and intent data from AI-powered apps. Early access now open.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://velmax.llc/">
+  <meta property="og:image" content="https://velmax.llc/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+HTML TAG: <html lang="en" class="js intro lenis lenis-stopped gl has-cursor">
+BODY TAG: <body>
+
+--- STYLESHEETS/SCRIPTS SRC ---
+   https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js
+   assets/vendor/lenis.min.js
+   assets/field-gl.js
+   assets/velmax.js
+   https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920
+
+--- INLINE CSS SIZE: 0 chars across 0 blocks
+
+FONT FAMILIES (inline css): []
+
+COLOR VALUES (top 30): []
+
+CSS VARIABLES (top 40): []
+
+KEYFRAMES: []
+
+DATA ATTRIBUTES: [
+  "data-cid", "data-ctag", "data-cscore", "data-decode",
+  "data-clock", "data-zone", "data-sec", "data-field",
+  "data-hud", "data-reveal", "data-spot", "data-typer",
+  "data-typer-out", "data-o", "data-ring", "data-ring-step",
+  "data-flow", "data-record", "data-record-state",
+  "data-raw", "data-safe", "data-interest", "data-forget",
+  "data-r", "data-year", "data-lenis-prevent", "data-s", "data-cf-beacon"
+]
+
+TOP CLASS NAMES: mono(105)  ch(25)  line(16)  seg(12)  seg-top(12)  seg-viz(12)  seg-meta(12)  wrap(11)  eyebrow(9)  btn(8)  idx(8)  rec-row(8)  rk(8)  rv(8)  sec-title(7)  sec-lede(6)  ch-ev(6)  wd(5)  btn-arrow(5)  sec(5)  ch-coh(5)  fld(5)  btn-primary(4)  sec-head(4)  tile(4)  tile-k(4)  chips(4)  st-body(4)  step-n(4)  is-pii(4)  field(3)  btn-ghost(3)  aud-label(3)  dots(3)  ch-dest(3)  ring-btn(2)  is-new(2)  field-row(2)  sheet-h(2)  js(1)  intro(1)  lenis(1)  lenis-stopped(1)  gl(1)  has-cursor(1)
+
+##########################################################################################
+### DEEP DIVE: edolus.com
+##########################################################################################
+
+--- META TAGS ---
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta charset="utf-8">
+
+HTML TAG: <html>
+BODY TAG: <body>
+
+--- STYLESHEETS/SCRIPTS SRC ---
+   playcanvas-stable.min.js
+   __settings__.js
+   https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js
+   __modules__.js
+   __start__.js
+   __loading__.js
+   https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920
+
+--- INLINE CSS SIZE: 7459 chars across 3 blocks
+
+FONT FAMILIES (inline css): [ "\"JetBrains Mono\", monospace",
+  "\"General Sans\", sans-serif"
+]
+
+COLOR VALUES (top 30): [ "#000000", "rgba(0,0,0,0.5)", "#ffffff", "#C4C7C7",
+  "#000", "#FFFFFF"
+]
+
+CSS VARIABLES (top 40): []
+
+KEYFRAMES: [ "ctaLabelBlink", "ctaBlink" ]
+
+DATA ATTRIBUTES: [ "data-engine", "data-cf-beacon" ]
+
+TOP CLASS NAMES: st0(6)  roll-num(6)  roll-col(3)  pct-sign(1)  hp-text(1)

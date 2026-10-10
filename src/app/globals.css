@@ -1,0 +1,272 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-space-grotesk), var(--font-inter), ui-sans-serif, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, "SF Mono", monospace;
+
+  /* ── OE BUSINESS palette ─────────────────────────────── */
+  --color-obsidian: #070809;
+  --color-carbon: #101215;
+  --color-graphite: #1a1d21;
+  --color-titanium: #b9c0c9;
+  --color-ice: #f4f6f8;
+  --color-mute: #858b95;
+  --color-oe: #8bafff;
+
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.75rem;
+  /* OE BUSINESS — permanent obsidian theme */
+  --background: #070809;
+  --foreground: #f4f6f8;
+  --card: #101215;
+  --card-foreground: #f4f6f8;
+  --popover: #101215;
+  --popover-foreground: #f4f6f8;
+  --primary: #b9c0c9;
+  --primary-foreground: #070809;
+  --secondary: #1a1d21;
+  --secondary-foreground: #f4f6f8;
+  --muted: #1a1d21;
+  --muted-foreground: #858b95;
+  --accent: #1a1d21;
+  --accent-foreground: #f4f6f8;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: rgba(244, 246, 248, 0.08);
+  --input: rgba(244, 246, 248, 0.1);
+  --ring: rgba(139, 174, 255, 0.5);
+  --chart-1: #b9c0c9;
+  --chart-2: #858b95;
+  --chart-3: #8bafff;
+  --chart-4: #565c66;
+  --chart-5: #f4f6f8;
+  --sidebar: #101215;
+  --sidebar-foreground: #f4f6f8;
+  --sidebar-primary: #b9c0c9;
+  --sidebar-primary-foreground: #070809;
+  --sidebar-accent: #1a1d21;
+  --sidebar-accent-foreground: #f4f6f8;
+  --sidebar-border: rgba(244, 246, 248, 0.08);
+  --sidebar-ring: rgba(139, 174, 255, 0.5);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-obsidian text-ice font-sans antialiased;
+    overflow-x: clip;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: #8bafff;
+    color: #070809;
+  }
+
+  :focus-visible {
+    outline: 2px solid rgba(139, 174, 255, 0.65);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #2a2e35 #070809;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #070809;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #262a31;
+    border-radius: 8px;
+    border: 2px solid #070809;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3a3f48;
+  }
+}
+
+@layer components {
+  /* thin horizontal light-line */
+  .hairline {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(185, 192, 201, 0.25),
+      transparent
+    );
+  }
+
+  /* thin vertical light-line */
+  .hairline-v {
+    width: 1px;
+    background: linear-gradient(
+      180deg,
+      transparent,
+      rgba(185, 192, 201, 0.25),
+      transparent
+    );
+  }
+
+  /* brushed titanium gradient text */
+  .text-metal {
+    background: linear-gradient(
+      165deg,
+      #f4f6f8 0%,
+      #c7cdd5 38%,
+      #79808b 78%,
+      #aab1ba 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* microscopic film grain */
+  .grain-bg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  }
+
+  /* accessible skip link — visible only when focused */
+  .skip-link:not(:focus) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .skip-link:focus {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 100;
+    background: #101215;
+    color: #f4f6f8;
+    padding: 0.75rem 1.1rem;
+    border-radius: 0.6rem;
+    border: 1px solid rgba(185, 192, 201, 0.3);
+    font-size: 0.8rem;
+  }
+}
+
+@keyframes scroll-dot {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(26px);
+    opacity: 0;
+  }
+}
+
+@keyframes sheen-move {
+  0% {
+    transform: translateX(-140%) rotate(18deg);
+  }
+  100% {
+    transform: translateX(240%) rotate(18deg);
+  }
+}
+
+@keyframes spin-slower {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-slower-rev {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes glow-breathe {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
