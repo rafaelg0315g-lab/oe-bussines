@@ -5,8 +5,12 @@ import {
   useLang,
 } from "@/components/oe/lang-provider";
 import { Navbar } from "@/components/oe/navbar";
+import { IntroGate } from "@/components/oe/intro-gate";
+import { Cursor } from "@/components/oe/cursor";
+import { SmoothScroll } from "@/components/oe/smooth-scroll";
 import { Hero } from "@/components/oe/hero";
 import { BrandTransition } from "@/components/oe/brand-transition";
+import { Ticker } from "@/components/oe/ticker";
 import { Identity } from "@/components/oe/identity";
 import { Philosophy } from "@/components/oe/philosophy";
 import { Vision } from "@/components/oe/vision";
@@ -41,11 +45,15 @@ export default function Home() {
       <div className="relative flex min-h-screen flex-col bg-obsidian text-ice">
         <SkipLink />
         <Grain />
+        <IntroGate />
+        <Cursor />
+        <SmoothScroll />
         <Navbar />
 
         <main id="main" className="flex-1">
           <Hero />
           <BrandTransition />
+          <Ticker />
           <Identity />
           <Philosophy />
           <Vision />

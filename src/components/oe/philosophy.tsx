@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useLang } from "./lang-provider";
 import { Reveal, SectionHeading, EASE } from "./motion-primitives";
+import { ChapterGhost } from "./chapter-ghost";
 
 /**
  * Philosophy — three principles, horizontal on desktop / vertical on mobile.
@@ -23,6 +24,7 @@ export function Philosophy() {
       aria-label={t.philosophy.kicker}
       className="relative scroll-mt-24 px-6 py-28 md:px-10 md:py-40"
     >
+      <ChapterGhost numeral="02" className="left-[-4vw] top-10 hidden lg:block" />
       <div className="mx-auto w-full max-w-[1320px]">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <SectionHeading kicker={t.philosophy.kicker} title={t.philosophy.title} />

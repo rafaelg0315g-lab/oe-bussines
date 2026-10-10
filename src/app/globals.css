@@ -213,6 +213,52 @@
   }
 }
 
+/* ── Lenis smooth scroll (set by the SmoothScroll provider) ─────── */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ── custom cursor (enabled only on precise pointers via JS) ────── */
+html.has-cursor body,
+html.has-cursor a,
+html.has-cursor button,
+html.has-cursor [role="button"] {
+  cursor: none;
+}
+
+/* text fields keep the native caret cursor for usability */
+html.has-cursor input,
+html.has-cursor textarea,
+html.has-cursor select {
+  cursor: auto;
+}
+
+/* ── editorial helpers ──────────────────────────────────────────── */
+
+/* hollow display type — giant chapter numerals & ghost watermarks */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(185, 192, 201, 0.14);
+}
+
+.text-outline-faint {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(185, 192, 201, 0.09);
+}
+
 @keyframes scroll-dot {
   0% {
     transform: translateY(0);
@@ -258,6 +304,15 @@
   }
   50% {
     opacity: 0.9;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 

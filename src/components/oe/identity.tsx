@@ -2,6 +2,7 @@
 
 import { useLang } from "./lang-provider";
 import { Reveal, SectionHeading } from "./motion-primitives";
+import { ChapterGhost } from "./chapter-ghost";
 
 /**
  * Identity — editorial asymmetric composition:
@@ -16,6 +17,7 @@ export function Identity() {
       aria-label={t.identity.kicker}
       className="relative scroll-mt-24 px-6 py-28 md:px-10 md:py-40"
     >
+      <ChapterGhost numeral="01" className="right-[-3vw] top-6 hidden lg:block" />
       <div className="mx-auto grid w-full max-w-[1320px] grid-cols-1 gap-14 md:grid-cols-12 md:gap-10">
         {/* left: title + metallic surface */}
         <div className="md:col-span-6">

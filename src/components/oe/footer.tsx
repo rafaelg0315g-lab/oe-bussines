@@ -93,11 +93,13 @@ export function Footer() {
       {/* monumental brand wordmark — the final signature */}
       <div
         aria-hidden
-        className="pointer-events-none mt-14 select-none overflow-hidden"
+        className="pointer-events-none relative mt-14 select-none overflow-hidden"
       >
         <p className="text-metal whitespace-nowrap text-center font-display text-[clamp(3.2rem,11.6vw,12.5rem)] font-semibold leading-[0.9] tracking-[-0.03em] opacity-90">
           OE BUSINESS
         </p>
+        {/* slow metallic light pass over the signature */}
+        <div className="absolute inset-y-0 left-0 w-1/4 animate-[sheen-move_12s_ease-in-out_infinite] bg-gradient-to-r from-transparent via-white/[0.07] to-transparent" />
       </div>
     </footer>
   );

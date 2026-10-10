@@ -24,6 +24,21 @@ const es = {
     contact: "Contacto",
     cta: "Contacto",
   },
+  intro: {
+    concept: "THE NEXT FORM",
+    cornerBrand: "OE BUSINESS",
+    cornerVision: "INDEPENDENT VISION",
+  },
+  ticker: {
+    words: [
+      "THE NEXT FORM",
+      "EVOLUCIÓN",
+      "CONEXIÓN",
+      "PRECISIÓN",
+      "VISIÓN",
+      "OE BUSINESS",
+    ],
+  },
   hero: {
     label: "OE BUSINESS / INDEPENDENT VISION",
     title1: "EL FUTURO NO SE ESPERA.",
@@ -33,6 +48,7 @@ const es = {
     ctaPrimary: "Conocer nuestra identidad",
     ctaSecondary: "Nuestra visión",
     scroll: "Desplázate",
+    hud: "V.01 — THE NEXT FORM",
   },
   transition: {
     text: "Las grandes ideas comienzan con una forma diferente de mirar.",
@@ -86,6 +102,7 @@ const es = {
     ],
   },
   manifesto: {
+    label: "MANIFIESTO",
     lines: [
       "No seguimos el futuro.",
       "Lo imaginamos.",
@@ -151,6 +168,21 @@ const en: typeof es = {
     contact: "Contact",
     cta: "Contact",
   },
+  intro: {
+    concept: "THE NEXT FORM",
+    cornerBrand: "OE BUSINESS",
+    cornerVision: "INDEPENDENT VISION",
+  },
+  ticker: {
+    words: [
+      "THE NEXT FORM",
+      "EVOLUTION",
+      "CONNECTION",
+      "PRECISION",
+      "VISION",
+      "OE BUSINESS",
+    ],
+  },
   hero: {
     label: "OE BUSINESS / INDEPENDENT VISION",
     title1: "THE FUTURE ISN'T WAITED FOR.",
@@ -160,6 +192,7 @@ const en: typeof es = {
     ctaPrimary: "Discover our identity",
     ctaSecondary: "Our vision",
     scroll: "Scroll",
+    hud: "V.01 — THE NEXT FORM",
   },
   transition: {
     text: "Great ideas begin with a different way of seeing.",
@@ -213,6 +246,7 @@ const en: typeof es = {
     ],
   },
   manifesto: {
+    label: "MANIFESTO",
     lines: [
       "We don't follow the future.",
       "We imagine it.",

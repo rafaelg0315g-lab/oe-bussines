@@ -66,3 +66,31 @@ Stage Summary:
 - Complete OE BUSINESS one-page institutional experience shipped on the existing Next.js 16 stack; single route (/), 10 sections, full ES/EN, R3F 3D with graceful fallbacks, real contact reception (SQLite via Prisma), lint clean, browser-verified end-to-end
 - Config points: NEXT_PUBLIC_SITE_URL (domain pending purchase), NEXT_PUBLIC_CONTACT_EMAIL (business email shown in contact/footer)
 - Key artifacts: src/components/oe/* (14 components), src/lib/i18n/dictionary.ts, src/app/api/contact/route.ts, prisma ContactMessage model, public/og.png, src/app/icon.svg
+
+---
+Task ID: 16 (impact upgrade + git push)
+Agent: Z.ai Code (orchestrator)
+Task: Make the OE BUSINESS experience even more impactful; verify; push to GitHub
+
+Work Log:
+- Installed lenis@1.3.26 (smooth inertia scrolling)
+- New IntroGate (src/components/oe/intro-gate.tsx + intro-store.ts): cinematic preloader — OE monogram, 000→100 precision counter, THE NEXT FORM status, split-curtain exit; plays once per session (sessionStorage), instant lift for returning visitors, scroll locked while on stage; hero/navbar choreography now starts when the gate lifts (zustand phase store)
+- New Cursor (cursor.tsx): dot + lagging ring studio cursor, expands over interactive elements, fine-pointer only, disabled under reduced motion, native cursor kept for text fields
+- New SmoothScroll (smooth-scroll.tsx): Lenis provider (lerp 0.09), stops during intro gate, intercepts anchor clicks into long eased camera moves (offset -72, 1.5s), fully disabled under reduced motion
+- New Ticker (ticker.tsx): THE NEXT FORM marquee between BrandTransition and Identity — mono uppercase, diamond separators, edge fades, pause on hover; dictionary keys intro.* and ticker.* added (ES/EN)
+- New ChapterGhost (chapter-ghost.tsx): monumental hollow parallax numerals — 01 Identity, 02 Philosophy, 04 Founders, 05 Contact (desktop only; Vision stays clean)
+- Hero upgraded: gate-aware entrance, scramble/decode effect on the eyebrow label (scramble-text.tsx), giant hollow "OE" ghost watermark with scroll parallax, magnetic primary CTA (spring), live HUD clock + "V.01 — THE NEXT FORM", scroll-linked copy drift/fade
+- Hero 3D: drei Sparkles titanium dust (90 particles, reduced-motion aware)
+- Navbar: scroll progress hairline (springed scaleX, titanium→oe gradient) + gate-aware entrance
+- Manifesto: blur-in/blur-out per line, live rollover counter (01/06), MANIFIESTO label, radial glow rising with the final brand line, larger clamp type (up to ~5.2rem)
+- Footer: slow metallic sheen pass over the monumental wordmark
+- globals.css: lenis classes, has-cursor rules, text-outline utilities, marquee keyframes
+- Lint fixes: setState-in-effect (cursor now ref-driven, LiveClock rAF-deferred, ScrambleText derived idle render) — `bun run lint` clean
+- Browser verification (agent-browser): intro gate sequence OK; hero entrance OK; ticker OK; ghost numerals OK; manifesto counter OK; footer wordmark OK; ES→EN switch OK (html lang + persistence); contact form submitted → POST /api/contact 200 + Prisma INSERT verified in dev.log; WhatsApp href = https://wa.me/573247078735; mobile 390px → no horizontal overflow (scrollWidth 390 = innerWidth 390); mobile menu open→navigate→auto-close OK; zero console errors, zero page errors
+- Untracked runtime artifacts before push: .env, db/custom.db (git rm --cached); .gitignore already covers them
+- Pushed main to https://github.com/rafaelg0315g-lab/oe-bussines using the user-provided token (inline, not stored in tracked files)
+
+Stage Summary:
+- Experience is now a level more cinematic: intro ritual + buttery Lenis scroll + studio cursor + editorial marquee + monumental ghost numerals + richer hero/manifesto choreography
+- All accessibility/UX guarantees preserved (reduced-motion paths, keyboard nav, a11y labels); lint clean; end-to-end verified in browser at desktop and mobile widths
+- Remote repository updated: rafaelg0315g-lab/oe-bussines (main)

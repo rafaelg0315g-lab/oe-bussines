@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
-import { Environment, Float, Lightformer } from "@react-three/drei";
+import { Environment, Float, Lightformer, Sparkles } from "@react-three/drei";
 import { useReducedMotion } from "framer-motion";
 import * as THREE from "three";
 
@@ -97,6 +97,19 @@ export default function OrbitalObject() {
           scale={1.6}
         />
       </Environment>
+
+      {/* microscopic titanium dust — the atmosphere breathes */}
+      {!reduced && (
+        <Sparkles
+          count={90}
+          scale={[11, 6.5, 5]}
+          position={[0, 0, -0.5]}
+          size={1.7}
+          speed={0.22}
+          opacity={0.38}
+          color="#c7cdd5"
+        />
+      )}
 
       <group position={position} scale={scale}>
         {reduced ? (

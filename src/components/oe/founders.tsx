@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useLang } from "./lang-provider";
 import { Reveal, SectionHeading, EASE } from "./motion-primitives";
+import { ChapterGhost } from "./chapter-ghost";
 import { OeMark } from "./logo";
 
 /**
@@ -19,6 +20,7 @@ export function Founders() {
       aria-label={t.founders.kicker}
       className="relative scroll-mt-24 px-6 py-28 md:px-10 md:py-40"
     >
+      <ChapterGhost numeral="04" className="right-[-3vw] top-16 hidden lg:block" />
       <div className="mx-auto w-full max-w-[1320px]">
         <SectionHeading kicker={t.founders.kicker} title={t.founders.title} />
 

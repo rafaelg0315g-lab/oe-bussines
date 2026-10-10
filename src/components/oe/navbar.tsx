@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { OeLockup } from "./logo";
 import { useLang } from "./lang-provider";
 import { EASE } from "./motion-primitives";
+import { useIntroStore } from "./intro-store";
 import type { Lang } from "@/lib/i18n/dictionary";
 
 const SECTION_IDS = [
@@ -52,6 +53,15 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState<string>("inicio");
   const [open, setOpen] = useState(false);
+  const phase = useIntroStore((s) => s.phase);
+  const ready = phase === "done";
+
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, {
+    stiffness: 90,
+    damping: 24,
+    mass: 0.4,
+  });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -103,8 +113,8 @@ export function Navbar() {
     <>
       <motion.header
         initial={{ y: -70, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.9, delay: 0.2, ease: EASE }}
+        animate={ready ? { y: 0, opacity: 1 } : { y: -70, opacity: 0 }}
+        transition={{ duration: 0.9, delay: 0.15, ease: EASE }}
         className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color] duration-500 ${
           scrolled
             ? "border-b border-white/[0.06] bg-obsidian/70 backdrop-blur-xl"
@@ -170,6 +180,14 @@ export function Navbar() {
             </button>
           </div>
         </nav>
+
+        {/* scroll progress hairline — machined read of the journey */}
+        <motion.div
+          aria-hidden
+          className="absolute inset-x-0 bottom-0 h-px origin-left bg-gradient-to-r from-titanium/60 via-titanium/30 to-oe/40"
+          style={{ scaleX: progress, opacity: scrolled ? 1 : 0 }}
+          transition={{ duration: 0.4 }}
+        />
       </motion.header>
 
       {/* mobile overlay */}
