@@ -94,3 +94,17 @@ Stage Summary:
 - Experience is now a level more cinematic: intro ritual + buttery Lenis scroll + studio cursor + editorial marquee + monumental ghost numerals + richer hero/manifesto choreography
 - All accessibility/UX guarantees preserved (reduced-motion paths, keyboard nav, a11y labels); lint clean; end-to-end verified in browser at desktop and mobile widths
 - Remote repository updated: rafaelg0315g-lab/oe-bussines (main)
+
+---
+Task ID: 17 (professional README)
+Agent: Z.ai Code (orchestrator)
+Task: Add a professional README to the GitHub repository
+
+Work Log:
+- Verified repo state: no README existed; inspected components (25 files in src/components/oe), Prisma schema (ContactMessage), public assets (logo.svg, og.png, robots.txt) and env vars to document accurately
+- Wrote README.md (Spanish, brand-aligned): centered OE monogram + badges (Next.js 16 / TS 5 / Tailwind 4 / R3F 9 / Prisma 6), OG banner, project narrative, features (experience + engineering), tech stack table, project structure tree, getting started (bun, db:push, env vars table), site journey table (chapters), design philosophy (01 Visión / 02 Innovación / 03 Evolución + palette tokens), WhatsApp contact (wa.me/573247078735), copyright footer with tagline
+- No invented URLs, stats or credentials; domain left configurable via NEXT_PUBLIC_SITE_URL
+- Committed (f875602) and pushed to origin main successfully (a2095f5..f875602)
+
+Stage Summary:
+- Repository rafaelg0315g-lab/oe-bussines now has a professional, brand-consistent README documenting the project, stack, setup and contact channels
