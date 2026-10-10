@@ -30,21 +30,25 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "OE BUSINESS — The Next Form",
-    template: "%s — OE BUSINESS",
+    default: "OE BUSINESS | Innovación y Visión Empresarial — The Next Form",
+    template: "%s | OE BUSINESS",
   },
   description:
-    "OE BUSINESS es una empresa independiente fundada por Oscar y Eduardo. Una visión compartida, una mentalidad innovadora y la determinación de construir lo que viene.",
+    "OE BUSINESS es una empresa independiente de Colombia, fundada por Oscar y Eduardo. Innovación, visión y evolución: construir hoy lo que definirá el mañana. Conoce nuestra historia y contáctanos.",
   applicationName: "OE BUSINESS",
   authors: [{ name: "Oscar & Eduardo — OE BUSINESS" }],
   creator: "OE BUSINESS",
   keywords: [
     "OE BUSINESS",
     "The Next Form",
-    "visión",
-    "innovación",
-    "evolución",
+    "OE Business Colombia",
     "empresa independiente",
+    "innovación empresarial",
+    "visión empresarial",
+    "innovación",
+    "visión",
+    "evolución",
+    "Oscar y Eduardo",
   ],
   alternates: {
     canonical: "/",
@@ -53,8 +57,9 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     siteName: "OE BUSINESS",
-    title: "OE BUSINESS — The Next Form",
-    description: "El futuro no se espera. Se construye.",
+    title: "OE BUSINESS — Innovación y Visión Empresarial",
+    description:
+      "El futuro no se espera. Se construye. Conoce OE BUSINESS, la empresa independiente fundada por Oscar y Eduardo.",
     locale: "es_ES",
     images: [
       {
@@ -67,8 +72,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OE BUSINESS — The Next Form",
-    description: "El futuro no se espera. Se construye.",
+    title: "OE BUSINESS — Innovación y Visión Empresarial",
+    description:
+      "El futuro no se espera. Se construye. Conoce OE BUSINESS, la empresa independiente fundada por Oscar y Eduardo.",
     images: ["/og.png"],
   },
   robots: {
