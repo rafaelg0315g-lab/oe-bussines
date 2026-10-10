@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Space_Grotesk, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -133,6 +134,11 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+/**
+ * Google Analytics 4 — measurement ID overridable via NEXT_PUBLIC_GA_MEASUREMENT_ID.
+ */
+const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-086KCW3G8W";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -148,6 +154,19 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        {/* Google tag (gtag.js) — loads after hydration, never blocks rendering */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${gaId}');
+          `}
+        </Script>
       </body>
     </html>
   );
