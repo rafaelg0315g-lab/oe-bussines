@@ -197,3 +197,18 @@ Work Log:
 
 Stage Summary:
 - Search-facing copy now contains real queryable terms (brand + category + location) while staying factual to the brand spec; remaining findability work remains deployment/backlinks-dependent
+
+---
+Task ID: 24 (Google Analytics 4)
+Agent: Z.ai Code (orchestrator)
+Task: Add Google Analytics to the site
+
+Work Log:
+- Integrated GA4 with next/script (recommended App Router pattern, no new dependencies): gtag.js library script + inline config, both strategy="afterInteractive" so they never block rendering/hydration
+- Measurement ID G-086KCW3G8W hardcoded as fallback, overridable via NEXT_PUBLIC_GA_MEASUREMENT_ID
+- Scripts placed at the end of <body> in layout.tsx, after children
+- Verified served HTML contains googletagmanager.com/gtag/js?id=G-086KCW3G8W and gtag('config','G-086KCW3G8W'); lint clean
+- Committed and pushed to origin main
+
+Stage Summary:
+- GA4 live on the site; data will flow to property G-086KCW3G8W once deployed on the public domain (localhost hits may also appear in DebugView during development)
