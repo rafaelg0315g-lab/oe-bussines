@@ -123,3 +123,17 @@ Work Log:
 
 Stage Summary:
 - All public-facing brand assets now use the OE monogram: site favicon, README header/footer on GitHub, OG banner
+
+---
+Task ID: 19 (GitHub camo cache fix)
+Agent: Z.ai Code (orchestrator)
+Task: README still showed the cached Z logo on GitHub despite the file being updated
+
+Work Log:
+- Diagnosed: the file public/logo.svg was already the OE monogram (user confirmed clicking through showed OE), but GitHub's camo image proxy had the old Z logo cached under that URL
+- Fix (cache-busting): renamed public/logo.svg → public/oe-logo.svg via git mv (new URL = fresh camo fetch, old Z URL dies with the path)
+- Updated README.md references: header + footer <img> now point to public/oe-logo.svg?raw=1, structure tree comment updated; verified no other logo.svg references remain
+- Committed (0fbaf16) and pushed to origin main (3a81889..0fbaf16)
+
+Stage Summary:
+- GitHub README now loads the OE monogram from a brand-new URL, bypassing the stale camo cache entry entirely; the Z logo path no longer exists in the repo
