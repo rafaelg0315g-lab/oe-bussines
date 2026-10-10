@@ -108,3 +108,18 @@ Work Log:
 
 Stage Summary:
 - Repository rafaelg0315g-lab/oe-bussines now has a professional, brand-consistent README documenting the project, stack, setup and contact channels
+
+---
+Task ID: 18 (brand logo fix)
+Agent: Z.ai Code (orchestrator)
+Task: Remove the Z logo and replace it with the OE monogram
+
+Work Log:
+- Audited brand assets: src/app/icon.svg (favicon) was already the OE monogram (orbital ring + E bars) — OK; public/og.png has no Z branding — OK
+- Found the offender: public/logo.svg (shown twice in the GitHub README) was the leftover Z.ai placeholder logo with its breathe animation
+- Rewrote public/logo.svg as a refined OE monogram: obsidian plate (#12151A→#070809), hairline border, orbital ring + three E bars stroked with a titanium gradient (#E9EDF2→#B9C0C9→#858B95), geometry consistent with the favicon
+- No source references to the old logo.svg (README references the same path, no edit needed)
+- Committed (3a81889) and pushed to origin main (f875602..3a81889)
+
+Stage Summary:
+- All public-facing brand assets now use the OE monogram: site favicon, README header/footer on GitHub, OG banner
