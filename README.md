@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/logo.svg" alt="Monograma OE" width="92" />
+<img src="public/oe-logo.svg?raw=1" alt="Monograma OE" width="92" />
 
 # OE BUSINESS
 
@@ -70,7 +70,7 @@ La dirección de arte combina un estudio tecnológico de alto nivel, arquitectur
 ├── prisma/
 │   └── schema.prisma          # Modelo ContactMessage (persistencia de contacto)
 ├── public/
-│   ├── logo.svg               # Monograma OE (orbital + barras estructurales)
+│   ├── oe-logo.svg            # Monograma OE (orbital + barras estructurales)
 │   ├── og.png                 # Imagen Open Graph
 │   └── robots.txt
 ├── src/
@@ -184,7 +184,7 @@ bun run start      # Servidor de producción
 
 <div align="center">
 
-<img src="public/logo.svg" alt="Monograma OE" width="34" />
+<img src="public/oe-logo.svg?raw=1" alt="Monograma OE" width="34" />
 
 **© OE BUSINESS** — Todos los derechos reservados.
 
