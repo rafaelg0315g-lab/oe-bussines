@@ -137,7 +137,7 @@ export const viewport: Viewport = {
 /**
  * Google Analytics 4 — measurement ID overridable via NEXT_PUBLIC_GA_MEASUREMENT_ID.
  */
-const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-086KCW3G8W";
+const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-K0L03L09D4";
 
 export default function RootLayout({
   children,
