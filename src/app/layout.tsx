@@ -48,7 +48,6 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/",
-    languages: { es: "/", en: "/" },
   },
   openGraph: {
     type: "website",
@@ -82,6 +81,46 @@ export const metadata: Metadata = {
   },
 };
 
+/**
+ * Structured data — helps Google understand the organization behind the brand.
+ * Only verifiable facts are included (no invented URLs or statistics).
+ */
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      "name": "OE BUSINESS",
+      "alternateName": "OE Business — The Next Form",
+      "description":
+        "Empresa independiente fundada por Oscar y Eduardo. Una visión compartida, una mentalidad innovadora y la determinación de construir lo que viene.",
+      "url": `${siteUrl}/`,
+      "logo": `${siteUrl}/og.png`,
+      "founder": [
+        { "@type": "Person", "name": "Oscar" },
+        { "@type": "Person", "name": "Eduardo" },
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+57 324 707 8735",
+        "url": "https://wa.me/573247078735",
+        "availableLanguage": ["es", "en"],
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      "url": `${siteUrl}/`,
+      "name": "OE BUSINESS",
+      "description": "El futuro no se espera. Se construye.",
+      "inLanguage": "es",
+      "publisher": { "@id": `${siteUrl}/#organization` },
+    },
+  ],
+};
+
 export const viewport: Viewport = {
   themeColor: "#070809",
   width: "device-width",
@@ -98,6 +137,10 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.variable} ${inter.variable} ${plexMono.variable} font-sans antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
