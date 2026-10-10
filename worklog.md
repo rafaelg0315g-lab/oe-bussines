@@ -182,3 +182,18 @@ Work Log:
 
 Stage Summary:
 - Technical SEO complete: sitemap + robots + structured data + clean canonical; remaining ranking work is deployment-dependent (domain, GSC submission, backlinks) — communicated roadmap to user
+
+---
+Task ID: 23 (metadata optimization)
+Agent: Z.ai Code (orchestrator)
+Task: Optimize tab title and meta description for discoverability
+
+Work Log:
+- User asked whether changing the tab description improves findability; explained: <title> is a strong ranking factor, meta description drives CTR (no direct ranking effect)
+- Before: title was brand-only ("OE BUSINESS — The Next Form") — zero queryable keywords
+- After: title = "OE BUSINESS | Innovación y Visión Empresarial — The Next Form"; description = Colombia + fundadores + keywords + soft CTA (~190 chars); keywords expanded (OE Business Colombia, innovación empresarial, visión empresarial, Oscar y Eduardo); OG/Twitter titles & descriptions aligned
+- Verified served HTML: <title> and meta description render correctly; lint clean
+- Committed and pushed to origin main
+
+Stage Summary:
+- Search-facing copy now contains real queryable terms (brand + category + location) while staying factual to the brand spec; remaining findability work remains deployment/backlinks-dependent
