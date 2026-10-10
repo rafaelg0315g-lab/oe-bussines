@@ -229,3 +229,17 @@ Work Log:
 
 Stage Summary:
 - Site is LIVE at https://oe-bussines.vercel.app with full GA4 + GSC stack; pending user-side ops: correct GA4 check URL, Vercel env var + redeploy, GSC verification + sitemap submission
+
+---
+Task ID: 26 (GA4 ID swap)
+Agent: Z.ai Code (orchestrator)
+Task: Replace GA4 measurement ID with the user's new property tag
+
+Work Log:
+- User provided a new Google tag: G-K0L03L09D4 (replaces G-086KCW3G8W — likely a freshly created property for the correct site)
+- Updated the fallback gaId in src/app/layout.tsx; single tag kept (Google: max one tag per page)
+- Verified served HTML: gtag/js?id=G-K0L03L09D4 + config present; zero remnants of the old ID; lint clean
+- Committed and pushed to origin main (Vercel auto-deploy will pick it up)
+
+Stage Summary:
+- Live site will report to GA4 property G-K0L03L09D4 after the next Vercel deployment; user should re-run the tag check against https://oe-bussines.vercel.app (not osk-apps.vercel.app)
