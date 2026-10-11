@@ -57,6 +57,110 @@ export function Identity() {
           </Reveal>
         </div>
       </div>
+
+      {/* Areas of activity — same editorial hairline language */}
+      <div className="mx-auto mt-28 w-full max-w-[1320px] md:mt-40">
+        <Reveal>
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-titanium/80">
+                {t.identity.areasKicker}
+              </p>
+              <h3 className="mt-4 font-display text-2xl font-semibold tracking-[-0.01em] text-ice md:text-3xl">
+                {t.identity.areasTitle}
+              </h3>
+            </div>
+            <span aria-hidden className="hairline hidden w-40 md:block" />
+          </div>
+        </Reveal>
+
+        <div className="mt-12 grid gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
+          {t.identity.areas.map((area, i) => (
+            <Reveal key={area.title} delay={i * 0.07}>
+              <div className="group border-t border-white/[0.07] py-8">
+                <div className="flex items-center gap-5">
+                  <span className="font-mono text-[10px] tracking-[0.3em] text-mute">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span
+                    aria-hidden
+                    className="h-px flex-1 bg-white/[0.07] transition-colors duration-500 group-hover:bg-titanium/30"
+                  />
+                </div>
+                <h4 className="mt-6 font-display text-lg font-semibold text-ice">
+                  {area.title}
+                </h4>
+                <p className="mt-3 text-sm leading-[1.8] text-mute">{area.text}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+
+      {/* Ecosystem architecture + mission */}
+      <div className="mx-auto mt-28 grid w-full max-w-[1320px] gap-14 md:mt-40 md:grid-cols-12 md:gap-10">
+        <div className="md:col-span-6">
+          <Reveal>
+            <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-titanium/80">
+              {t.identity.ecosystemKicker}
+            </p>
+            <p className="mt-6 max-w-xl text-[15px] leading-[1.9] text-mute md:text-base">
+              {t.identity.ecosystemLead}
+            </p>
+            <p className="mt-10 font-mono text-[10px] uppercase tracking-[0.3em] text-mute/70">
+              {t.identity.ecosystemNote}
+            </p>
+          </Reveal>
+          <ul className="mt-4">
+            {t.identity.ecosystem.map((row, i) => (
+              <Reveal key={row.name} delay={i * 0.05}>
+                <li className="border-t border-white/[0.06] py-4 sm:flex sm:items-baseline sm:justify-between sm:gap-6">
+                  <span
+                    className={`font-display text-base font-semibold tracking-[0.02em] ${
+                      i === 0 ? "text-ice" : "text-titanium"
+                    }`}
+                  >
+                    {row.name}
+                  </span>
+                  <span className="mt-1 block text-sm leading-relaxed text-mute sm:mt-0 sm:flex-1 sm:pl-6 sm:pr-4">
+                    {row.role}
+                  </span>
+                  <span
+                    className={`mt-2 inline-block font-mono text-[9px] uppercase tracking-[0.25em] sm:mt-0 sm:shrink-0 ${
+                      i === 0 ? "text-titanium" : "text-mute/80"
+                    }`}
+                  >
+                    {row.status}
+                  </span>
+                </li>
+              </Reveal>
+            ))}
+          </ul>
+        </div>
+
+        <div className="md:col-span-5 md:col-start-8">
+          <Reveal>
+            <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-titanium/80">
+              {t.identity.missionKicker}
+            </p>
+          </Reveal>
+          <div className="mt-6 space-y-9">
+            {t.identity.mission.map((paragraph, i) => (
+              <Reveal key={i} delay={0.1 + i * 0.1}>
+                <div className="flex gap-6">
+                  <span
+                    aria-hidden
+                    className="mt-[13px] h-px w-8 shrink-0 bg-titanium/30"
+                  />
+                  <p className="text-[15px] leading-[1.9] text-mute md:text-base">
+                    {paragraph}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

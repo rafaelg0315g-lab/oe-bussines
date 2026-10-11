@@ -36,39 +36,50 @@ export function Philosophy() {
           </Reveal>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 md:mt-28 md:grid-cols-3 md:gap-0">
-          {t.philosophy.items.map((item, i) => (
-            <Reveal
-              key={item.n}
-              delay={i * 0.12}
-              className={`group relative border-t border-white/[0.06] py-12 transition-colors duration-500 first:border-t-0 md:border-l md:border-t-0 md:py-2 md:pl-10 md:pr-10 md:first:border-l-0 md:first:pl-0 md:last:pr-0 ${
-                i > 0 ? "md:pl-10" : ""
-              }`}
-            >
-              {/* index + rule */}
-              <div className="flex items-center gap-6">
-                <span className="font-mono text-[11px] tracking-[0.3em] text-mute">
-                  {item.n}
-                </span>
-                <span
-                  aria-hidden
-                  className="h-px flex-1 bg-white/[0.07] transition-colors duration-500 group-hover:bg-titanium/30"
-                />
-              </div>
+        <div className="mt-20 grid grid-cols-1 md:mt-28 md:grid-cols-3">
+          {t.philosophy.items.map((item, i) => {
+            const rowPos = i % 3;
+            return (
+              <Reveal
+                key={item.n}
+                delay={rowPos * 0.12}
+                className={[
+                  "group relative border-t border-white/[0.06] py-12 transition-colors duration-500 md:py-10",
+                  i === 0 ? "border-t-0" : "",
+                  i >= 3 ? "md:border-t" : "md:border-t-0",
+                  rowPos === 0 ? "md:pl-0" : "md:border-l md:pl-10",
+                  rowPos === 2 ? "md:pr-0" : "md:pr-10",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+              >
+                {/* index + rule */}
+                <div className="flex items-center gap-6">
+                  <span className="font-mono text-[11px] tracking-[0.3em] text-mute">
+                    {item.n}
+                  </span>
+                  <span
+                    aria-hidden
+                    className="h-px flex-1 bg-white/[0.07] transition-colors duration-500 group-hover:bg-titanium/30"
+                  />
+                </div>
 
-              {/* principle graphic */}
-              <div className="mt-10 text-titanium/60 transition-colors duration-500 group-hover:text-titanium">
-                {graphics[i]}
-              </div>
+                {/* principle graphic — first row only */}
+                {i < 3 ? (
+                  <div className="mt-10 text-titanium/60 transition-colors duration-500 group-hover:text-titanium">
+                    {graphics[i]}
+                  </div>
+                ) : null}
 
-              <h3 className="mt-10 font-display text-xl font-semibold tracking-[0.1em] text-ice">
-                {item.title}
-              </h3>
-              <p className="mt-4 max-w-xs text-[15px] leading-[1.8] text-mute">
-                {item.text}
-              </p>
-            </Reveal>
-          ))}
+                <h3 className={`font-display text-xl font-semibold tracking-[0.1em] text-ice ${i < 3 ? "mt-10" : "mt-12"}`}>
+                  {item.title}
+                </h3>
+                <p className="mt-4 max-w-xs text-[15px] leading-[1.8] text-mute">
+                  {item.text}
+                </p>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>

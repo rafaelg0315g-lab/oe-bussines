@@ -33,7 +33,12 @@ export function Manifesto() {
   ];
 
   /* glow intensifies as the final brand line approaches */
-  const glowOpacity = useTransform(scrollYProgress, [0.68, 0.92], [0.16, 0.5]);
+  const lastStart = (total - 1) / total;
+  const glowOpacity = useTransform(
+    scrollYProgress,
+    [lastStart - 0.18, Math.min(lastStart + 0.06, 0.99)],
+    [0.16, 0.5],
+  );
 
   /* Accessible static version when the user prefers reduced motion */
   if (reduced) {
