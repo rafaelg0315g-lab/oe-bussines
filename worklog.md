@@ -243,3 +243,27 @@ Work Log:
 
 Stage Summary:
 - Live site will report to GA4 property G-K0L03L09D4 after the next Vercel deployment; user should re-run the tag check against https://oe-bussines.vercel.app (not osk-apps.vercel.app)
+
+---
+Task ID: 27 (corporate ecosystem content — MASTER PROMPT)
+Agent: Z.ai Code (orchestrator)
+Task: Update corporate content to present OE BUSINESS as a technology company with a product ecosystem, preserving structure/animations (user MASTER PROMPT)
+
+Work Log:
+- Inspected dictionary.ts + all oe components before editing (per prompt §13)
+- dictionary.ts: full ES/EN rewrite — hero (title "CONSTRUIMOS TECNOLOGÍA. / Creamos posibilidades.", official description, CTAs "Descubrir nuestro ecosistema"/"Conocer nuestra visión"), identity (official corporate description as p1-p3, 6 areas of activity, ecosystem architecture rows with honest statuses ACTIVA/EN PLANIFICACIÓN/PROPUESTA/FUTURO, mission §7), philosophy extended 3→6 principles (Innovación con propósito, Construcción continua, Visión a largo plazo, Calidad tecnológica, Accesibilidad, Responsabilidad), vision (visión §8 text, OE AI family 7 initiatives with statuses, VIRAL ENGINE description + 7 planned capabilities, roadmap "Lo que viene: el futuro del ecosistema OE" with 7 categories tagged EN PLANIFICACIÓN/EN EXPLORACIÓN/CONCEPTO FUTURO + transparency note), manifesto 6th line "La base de todo lo que viene.", ticker/footer/contact updated, intro/hero label → TECHNOLOGY COMPANY. Removed top-level `as const` so `en: typeof es` accepts distinct strings (tsc verified clean in src/)
+- identity.tsx: added areas grid (hairline editorial cards) + ecosystem architecture list + mission column, all inside existing section with existing Reveal primitives
+- philosophy.tsx: 6-item grid with conditional graphics (first row keeps the 3 animated SVGs) and per-row border logic
+- vision.tsx: added OE AI panel list, VIRAL ENGINE capabilities, roadmap cards (hairline glass cards, tone hi/lo tags), plus a content-stage scrim (top-[24%] gradient) after browser verification showed the 3D ring hurting text readability
+- manifesto.tsx: glow thresholds now derived from line count (6 lines + brand = 7 total)
+- layout.tsx: metadata description/keywords/OG/Twitter/JSON-LD updated to technology-company + ecosystem positioning
+- No structural/animation changes: section order, ids, nav, scroll choreography, 3D scenes, intro gate, Lenis, cursor all untouched; hrefs #identidad/#vision preserved
+- Verification so far: lint clean, tsc clean in src/, browser-checked hero/intro/areas/ecosystem/mission/philosophy/OE AI/VIRAL/roadmap + scrim fix (2 iterations), roadmap honest tags render
+- Pushed WIP commit 6ba6bf6 to origin main on user request ("lo que llevas gitpush")
+
+Stage Summary:
+- Site now explains what OE BUSINESS is, its areas, ecosystem architecture (OE AI family, VIRAL ENGINE, STUDIO/SYSTEMS/FLOW proposals), mission, 6 principles and honest roadmap — all within the original structure; remaining: verify manifesto 7-line counter, footer, EN switch and mobile overflow, then final push
+- Final verification completed: manifesto sequence 07/07 with metallic OE BUSINESS close + dynamic glow, footer with new ecosystem tagline, EN switch (html lang=en, localStorage oe-lang=en, nav/ticker/sections translated), mobile 390px scrollWidth 390 = no horizontal overflow, roadmap cards stack cleanly. Working tree clean — all content pushed in 6ba6bf6.
+
+Stage Summary (final):
+- MASTER PROMPT fulfilled end-to-end and browser-verified: tech-company definition, 6 areas, ecosystem architecture with honest statuses, OE AI family (7 initiatives), VIRAL ENGINE (7 planned capabilities), roadmap "Lo que viene" (7 categories with EN PLANIFICACIÓN/EN EXPLORACIÓN/CONCEPTO FUTURO), mission, 6 philosophy principles, new hero/manifiesto/footer messages — structure, animations, 3D, i18n and accessibility fully preserved; ES/EN mirror complete
